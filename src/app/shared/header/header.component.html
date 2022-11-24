@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <button (click)="toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Pesito</span>
+  <span class="example-spacer"></span>
+  <!-- div and ul using flex layout which is already imported in shared module -->
+  <div fxFlex fxLayout="Row" fxLayoutAlign="flex-end">
+    <ul fxLayout="Row" fxLayoutGap="'20px">
+      <li> <button mat-icon-button class="example-icon settings-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>settings</mat-icon>
+        </button>
+      </li>
+      <li>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>help_outline</mat-icon>
+        </button>
+      </li>
+      <li>
+
+          <!-- SignOut Button on icon -->
+        <button mat-button [matMenuTriggerFor]="menu">
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>person_outline</mat-icon>
+          </button>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon> exit_to_app</mat-icon>
+            Sign Out
+          </button>
+        </mat-menu>
+
+
+
+
+        
+      </li>
+    </ul>
+  </div>
+
+</mat-toolbar>
